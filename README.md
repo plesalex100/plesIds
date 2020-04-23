@@ -39,6 +39,8 @@ end})
 ![alt text](https://i.imgur.com/UTQ9xtE.png) 
 ![alt text](https://i.imgur.com/66TC32K.png)
 
-### FAQ
+FAQ
+-
+
 - Comenzile de mai sus se pun oriunde doriti ca buletinul/permisul sa fie afisat
 - Aceasta resursa a fost postata gratis deoarece au existat tentative de vanzare la aceasta resursa, de aceea nu ofer support pentru aceasta resursa, aveti informatiile necesare mai sus.
