@@ -5,10 +5,10 @@ local baseColor = vector4(255, 255, 255, 255)
 Citizen.CreateThread(function()
 	-- Font
 	RegisterFontFile('sgn')
-    signatureFont = RegisterFontId('Adinda Melia')
+    	signatureFont = RegisterFontId('Adinda Melia')
 
-    -- Img Sprites
-    local permis = CreateRuntimeTxd("permis_bg")
+    	-- Img Sprites
+    	local permis = CreateRuntimeTxd("permis_bg")
 	CreateRuntimeTextureFromImage(permis, "permis_bg", "assests/permis.png")
 
 	local buletin = CreateRuntimeTxd("buletin_bg")
@@ -35,11 +35,11 @@ AddEventHandler("ples-id:showPermis", function(data)
 	local waitEnded = false
 	if type(data) == "table" then
 		if data.nume:len() > 0 and data.prenume:len() > 0 then
-			local pedHeadshot = RegisterPedheadshot_3(PlayerPedId())
+			local pedHeadshot = Citizen.InvokeNative(0xBA8805A1108A2515, PlayerPedId())
 			if data.target then
 				UnregisterPedheadshot(pedHeadshot)
 				local player = GetPlayerFromServerId(data.target)
-				pedHeadshot = RegisterPedheadshot_3(GetPlayerPed(player))
+				pedHeadshot = Citizen.InvokeNative(0xBA8805A1108A2515, GetPlayerPed(player))
 			end
 			while not IsPedheadshotReady(pedHeadshot) or not IsPedheadshotValid(pedHeadshot) do Citizen.Wait(100) end
 			local headshot = GetPedheadshotTxdString(pedHeadshot)
