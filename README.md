@@ -5,13 +5,24 @@ Afiseaza buletinul / permisul romanesc
 
 Functia pentru a afisa buletinul:
 ```lua
-TriggerClientEvent("ples-id:showBuletin", player, {nume = firstname, prenume = name, age = age, adresa = home.." Nr. "..number, usr_id = target_id, target = target_src})
+TriggerClientEvent("ples-id:showBuletin", player, {
+  nume = firstname, 
+  prenume = name, 
+  age = age, 
+  adresa = home.." Nr. "..number, 
+  usr_id = target_id, 
+  target = target_src
+})
 ```
 
 Functia pentru a afisa permisul:
 ```lua
 vRP.getUserIdentity({nuser_id, function(identity)
-  TriggerClientEvent("ples-id:showPermis", player, {nume = identity.firstname, prenume = identity.name, target = nplayer})
+  TriggerClientEvent("ples-id:showPermis", player, {
+    nume = identity.firstname, 
+    prenume = identity.name, 
+    target = nplayer
+  })
 end})
 ```
 
