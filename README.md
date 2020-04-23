@@ -5,6 +5,11 @@ Afiseaza buletinul / permisul romanesc
 
 Functia pentru a afisa buletinul:
 ```lua
+-- param @player = Number: Source-ul player-ului caruia i se afiseaza pe ecran
+-- param @firstname @name @age @home @number = String: datele jucatorului care va aparea in buletin
+-- param @target_id = Number: Id-ul jucatorului care va aparea in buletin
+-- param @target_src = Number: Source-ul jucatorului care va aparea in buletin
+
 TriggerClientEvent("ples-id:showBuletin", player, {
   nume = firstname, 
   prenume = name, 
@@ -17,6 +22,10 @@ TriggerClientEvent("ples-id:showBuletin", player, {
 
 Functia pentru a afisa permisul:
 ```lua
+-- param @nuser_id = Number: Id-ul jucatorului care va aparea in buletin
+-- param @player = Number: Source-ul player-ului caruia i se afiseaza pe ecran
+-- param @nplayer = Number: Source-ul jucatorului care va aparea in buletin
+
 vRP.getUserIdentity({nuser_id, function(identity)
   TriggerClientEvent("ples-id:showPermis", player, {
     nume = identity.firstname, 
