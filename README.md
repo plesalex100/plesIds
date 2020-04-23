@@ -4,9 +4,8 @@ Afiseaza buletinul / permisul romanesc
 ### Usage (Server Side)
 
 Functia pentru a afisa buletinul:
-folositi functiile vRP.getUserIdentity() si vRP.getUserAddress() pentru a lua numele, anii si adresa
 ```
-TriggerClientEvent("ples-id:showBuletin", player, {nume = firstname, prenume = name, age = age, adresa = home.." Nr. "..number, usr_id = nuser_id, target = playerSource})
+TriggerClientEvent("ples-id:showBuletin", player, {nume = firstname, prenume = name, age = age, adresa = home.." Nr. "..number, usr_id = target_id, target = target_src})
 ```
 
 Functia pentru a afisa permisul:
