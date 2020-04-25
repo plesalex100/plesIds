@@ -26,13 +26,12 @@ Functia pentru a afisa permisul:
 -- param @player = Number: Source-ul player-ului caruia i se afiseaza pe ecran
 -- param @nplayer = Number: Source-ul jucatorului care va aparea in buletin
 
-vRP.getUserIdentity({nuser_id, function(identity)
-  TriggerClientEvent("ples-id:showPermis", player, {
-    nume = identity.firstname, 
-    prenume = identity.name, 
-    target = nplayer
-  })
-end})
+
+TriggerClientEvent("ples-id:showPermis", player, {
+  nume = firstname, 
+  prenume = name, 
+  target = nplayer
+})
 ```
 
 ### Poze
